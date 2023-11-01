@@ -16,7 +16,7 @@ variable "env_var" {
 variable "resource_group_name" {
   description = "Mose used resource group"
   type = string
-  default = "rg400_suresh"
+  default = "rg400suresh"
 }
 
 #location

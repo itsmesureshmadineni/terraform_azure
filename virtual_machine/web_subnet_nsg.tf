@@ -1,8 +1,8 @@
 #create web subnet 
 resource "azurerm_subnet" "websubnet" {
-  name = "${azurerm_virtual_network.myvnet.name}-${var.web_subnet_name}"
+  name = var.web_subnet_name
   virtual_network_name = azurerm_virtual_network.myvnet.name
-  address_prefixes = var.web_subnet_address
+  address_prefixes = [ "10.0.1.0/24" ]
   resource_group_name = azurerm_resource_group.myrg.name
 }
 
@@ -34,7 +34,7 @@ locals {
 
 resource "azurerm_network_security_rule" "web_subnet_rule" {
   for_each = local.web_subnet_inbound_ports
-  name                        = "nsg_rules-${each.value}"
+  name                        = "nsg-rules-${each.value}"
   priority                    = each.key
   direction                   = "Inbound"
   access                      = "Allow"

@@ -4,7 +4,7 @@
 variable "vnet_name" {
   description = "This is the virtual network name"
   type = string
-  default = "vnet_400"
+  default = "vnet400"
 }
 
 #create vnet adress spce
@@ -46,14 +46,14 @@ variable "db_subnet_address" {
 variable "web_subnet_name" {
   description = "This is the virtual network web subnet name"
   type = string
-  default = "web_subnet"
+  default = "websubnet"
 }
 
 #create web subnet address spce
 variable "web_subnet_address" {
   description = "This is for vnet web subnet address space"
   type = list(string)
-  default = [ "10.0.40.0/24" ]
+  default = [ "10.0.1.0/24" ]
 }
 
 #create bastion host subnet name
