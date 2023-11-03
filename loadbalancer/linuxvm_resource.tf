@@ -16,7 +16,7 @@ resource "azurerm_linux_virtual_machine" "linuxvm_vm" {
   location = azurerm_resource_group.rg_name.location
   size = "Standard_B2s"
   admin_username = var.username
-  network_interface_ids = [ azurerm_network_interface.azurerm_network_interface.web_linuxvn_ni.id ]
+  network_interface_ids = [ azurerm_network_interface.web_linuxvn_ni.id ]
 
   admin_ssh_key {
     username = var.username
