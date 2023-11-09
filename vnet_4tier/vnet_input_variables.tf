@@ -53,7 +53,7 @@ variable "web_subnet_name" {
 variable "web_subnet_address" {
   description = "This is for vnet web subnet address space"
   type = list(string)
-  default = [ "10.0.40.0/24" ]
+  default = [ "10.0.1.0/24" ]
 }
 
 #create bastion host subnet name
