@@ -4,7 +4,7 @@
 variable "vnet_name" {
   description = "This is the virtual network name"
   type = string
-  default = "vnet_400"
+  default = "vnet"
 }
 
 #create vnet adress spce
@@ -18,7 +18,7 @@ variable "vnet_address" {
 variable "app_subnet_name" {
   description = "This is the virtual network app subnet name"
   type = string
-  default = "app_subnet"
+  default = "appsubnet"
 }
 
 #create app subnet adress spce
@@ -32,7 +32,7 @@ variable "app_subnet_address" {
 variable "db_subnet_name" {
   description = "This is the virtual network db subnet name"
   type = string
-  default = "db_subnet"
+  default = "dbsubnet"
 }
 
 #create db subnet address spce
@@ -46,7 +46,7 @@ variable "db_subnet_address" {
 variable "web_subnet_name" {
   description = "This is the virtual network web subnet name"
   type = string
-  default = "web_subnet"
+  default = "websubnet"
 }
 
 #create web subnet address spce
